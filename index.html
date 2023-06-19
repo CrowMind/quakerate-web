@@ -1,76 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>QuakeRate</title>
-	<style>
-		body {
-			background-color: #F7F6E0;
-			color: #333;
-			font-family: Arial, sans-serif;
-			text-align: center;
-			padding: 0;
-			margin: 0;
-		}
-		
-		.container {
-			max-width: 600px;
-			margin: 0 auto;
-			padding: 20px;
-			background-color: #FFF;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			border-radius: 5px;
-			margin-top: 50px;
-		}
-		
-		h1 {
-			font-size: 40px;
-			margin-bottom: 10px;
-		}
-		
-		img {
-			max-width: 200px;
-			margin-bottom: 20px;
-		}
-		
-		p {
-			font-size: 18px;
-			line-height: 1.4;
-			margin-bottom: 20px;
-		}
-		
-		@media (prefers-color-scheme: dark) {
-			body {
-				background-color: #CAF24C;
-				color: #FFF;
-			}
-			
-			.container {
-				background-color: #333;
-			}
-		}
-	</style>
-</head>
-<body>
-	<div class="container">
-		<img src="icon.png" alt="QuakeRate Logo">
-		<h1>QuakeRate</h1>
-		<p>Deprem Dayanıklılık Puanı Uygulaması: QuakeRate
+<html>
+  <head>
+    <title>Page Title</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Jaldi&display=swap");
+      body {
+        background-color: #23282c;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 50px;
+        box-sizing: border-box;
+      }
 
-            <p>🏢🔍 Deprem dayanıklılığınızı öğrenmek ister misiniz?</p>
-            
-            <p>🌎 Türkiye'nin deprem gerçeğiyle yüzleşmesi ve güvenli yapılar inşa etme bilincinin artması gerektiği günümüzde, sizin de sevdiklerinizle birlikte güvende olduğunuzdan emin olmanız önemlidir.</p>
-            
-            <p>📱 QuakeRate uygulaması ile yaşadığınız veya çalıştığınız binaların deprem dayanıklılık puanlarını öğrenin ve güvende olup olmadığınızı kontrol edin!</p>
-            
-            <br>🌟 QuakeRate'in Sunduğu Özellikler:</br>
-            
-            <br>📍 Uygulama haritası sayesinde etrafınızdaki binaların deprem dayanıklılık puanlarını görebilirsiniz.</br>
-            <br>📊 Detaylı raporlar ve analizler sayesinde binanızın yapısal güçlü ve zayıf yönlerini öğrenebilir ve gerekli önlemleri alabilirsiniz.</br>
-            <br>🏢 İstediğiniz herhangi bir adresi aratarak o bölgedeki binaların deprem dayanıklılık puanlarını öğrenebilirsiniz.</br>
-            <br>🚧 Yapı denetim ve inşaat firmaları ile iletişime geçerek binanızın güçlendirilmesi veya yeniden yapılandırılması konusunda bilgi ve destek alabilirsiniz.</br>
-            
-	</div>
-</body>
+      .logo {
+        flex: 1;
+        text-align: center;
+        margin-top: 50px;
+        min-width: 100px;
+        padding-left: 5dvw;
+      }
+      .logo img {
+        flex: 1;
+        max-width: 80%;
+        height: auto;
+      }
+      .description {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .footer {
+        margin-top: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .mockup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+        width: 300px;
+        padding: 20px;
+      }
+      .phone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 400px;
+        height: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .frame {
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+        background-image: url("images/mockup.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 4;
+      }
+
+      .screen {
+        position: absolute;
+
+        width: 80%;
+        height: 80%;
+        background-color: transparent;
+        z-index: 2;
+      }
+
+      .screenshots {
+        position: absolute;
+
+        width: 58%;
+        height: 100%;
+
+        z-index: 3;
+      }
+
+      .screenshots img {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        width: 100%;
+        height: 100%;
+      }
+      .screenshots img.active {
+        opacity: 1;
+      }
+      .google-play-button {
+        display: inline-block;
+      }
+
+      /* Adjust the size of the button using the font-size property */
+      .google-play-button.small {
+        max-height: 10dvh;
+        max-width: 20dvw;
+      }
+
+      .google-play-button.large {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-family: "Jaldi";
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="phone">
+        <div class="frame"></div>
+        <div class="screen"></div>
+        <div class="screenshots">
+          <img
+            class="active"
+            src="images/screenshots/screenshot.png"
+            alt="Screenshot 1"
+          />
+          <img src="images/screenshots/screenshot2.png" alt="Screenshot 2" />
+          <img src="images/screenshots/screenshot3.png" alt="Screenshot 3" />
+        </div>
+      </div>
+
+      <div class="logo">
+        <img src="images/icon.png" alt="Logo" />
+        <div class="description">
+          <img src="images/quakerate.png" alt="Scrdeeenshot 1" class="active" />
+          <p style="font-size: 16px">
+            Türkiye'nin deprem gerçeğiyle yüzleşmesi ve güvenli yapılar inşa
+            etme bilincinin artması için ezber bozacak uygulama
+          </p>
+        </div>
+        <a
+          class="google-play-button small"
+          href="http://play.google.com/store/?pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+          ><img alt='Google Play'den alın'
+          src='https://play.google.com/intl/en_us/badges/static/images/badges/tr_badge_web_generic.png'/></a
+        >
+      </div>
+    </div>
+    <div class="footer">
+      <p>&copy; 2023 QuakeRate from CrowMind</p>
+    </div>
+    <script>
+      var screenshots = document.querySelectorAll(".screenshots img");
+      var index = 0;
+      setInterval(function () {
+        screenshots[index].classList.remove("active");
+        index = (index + 1) % screenshots.length;
+        screenshots[index].classList.add("active");
+      }, 3000);
+    </script>
+  </body>
 </html>
