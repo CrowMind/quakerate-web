@@ -27,11 +27,12 @@
         text-align: center;
         margin-top: 50px;
         min-width: 100px;
+        max-width: 500px;
         padding-left: 5dvw;
       }
       .logo img {
         flex: 1;
-        max-width: 80%;
+        max-width: 30%;
         height: auto;
       }
       .description {
@@ -97,8 +98,10 @@
         position: absolute;
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
-        width: 100%;
-        height: 100%;
+        width: 95%;
+        margin-top: 5%;
+        margin-left: 2%;
+        height: 95%;
       }
       .screenshots img.active {
         opacity: 1;
@@ -109,8 +112,10 @@
 
       /* Adjust the size of the button using the font-size property */
       .google-play-button.small {
-        max-height: 10dvh;
-        max-width: 20dvw;
+        max-height: 30dvh;
+        max-width: 30dvw;
+        min-height: 10dvh;
+        min-width: 30dvw;
       }
 
       .google-play-button.large {
@@ -131,18 +136,20 @@
         <div class="screenshots">
           <img
             class="active"
-            src="images/screenshots/screenshot.png"
+            src="images/screenshots/1.png"
             alt="Screenshot 1"
           />
-          <img src="images/screenshots/screenshot2.png" alt="Screenshot 2" />
-          <img src="images/screenshots/screenshot3.png" alt="Screenshot 3" />
+          <img src="images/screenshots/2.jpg" alt="Screenshot 2" />
+          <img src="images/screenshots/3.jpg" alt="Screenshot 3" />
+          <img src="images/screenshots/4.jpg" alt="Screenshot 3" />
+          <img src="images/screenshots/5.jpg" alt="Screenshot 3" />
         </div>
       </div>
 
       <div class="logo">
         <img src="images/icon.png" alt="Logo" />
         <div class="description">
-          <img src="images/quakerate.png" alt="Scrdeeenshot 1" class="active" />
+          <img style="max-width: 60%" src="images/quakerate.png" />
           <p style="font-size: 16px">
             Türkiye'nin deprem gerçeğiyle yüzleşmesi ve güvenli yapılar inşa
             etme bilincinin artması için ezber bozacak uygulama
@@ -151,9 +158,11 @@
         <a
           class="google-play-button small"
           href="http://play.google.com/store/?pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
-          ><img alt='Google Play'den alın'
-          src='https://play.google.com/intl/en_us/badges/static/images/badges/tr_badge_web_generic.png'/></a
-        >
+          ><img
+            style="object-fit: scale-down"
+            alt="Google Play'den alın"
+            src="https://play.google.com/intl/en_us/badges/static/images/badges/tr_badge_web_generic.png"
+        /></a>
       </div>
     </div>
     <div class="footer">
